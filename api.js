@@ -43,11 +43,10 @@ function request(url) {
       throw new Error('Algo deu errado =(');
     })
     .then(response => showPokemons(response.data.pokemon))
-    .catch(e => console.error(e));
+    .catch(e => alert(e));
 }
 
 function showPokemons(pokemons) {
-  console.log(pokemons);
   const section = document.querySelector('.pokemons');
   const sectionAttacks = document.querySelector('.attacks');
   const attackTitle = document.querySelector('.attackTitle');
